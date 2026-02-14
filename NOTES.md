@@ -2,7 +2,7 @@
 
 ## Worker Status: Disabled
 
-The `moltbot-sandbox` worker has been disabled as of 2026-02-14. It will not respond to requests on its `workers.dev` subdomain.
+The `moltbot-sandbox` worker has been disabled as of 2026-02-14. It will not respond to requests on its `workers.dev` subdomain. The cron trigger (`*/5 * * * *`) has also been removed.
 
 ### Re-enable via API
 
@@ -19,4 +19,4 @@ curl -s -X POST 'https://api.cloudflare.com/client/v4/accounts/21e83a659e53610d9
 npx wrangler deploy
 ```
 
-This will redeploy and automatically re-enable the worker.
+This will redeploy and automatically re-enable the worker and restore the cron trigger.
